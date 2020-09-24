@@ -56,7 +56,8 @@
 			}
 		}
 		.yellow-screen,
-		.white-screen {
+		.white-screen,
+		.page-not-found {
 			width: 100%;
 			height: calc(100% - 56px);
 		}
@@ -103,6 +104,11 @@
 		}
 		.white-screen {
 			background-color: #e3e3e3;
+		}
+		.page-not-found {
+			background-image: url("./assets/images/220876-P1KQR8-846.jpg");
+			background-size: cover;
+			background-position: 0% 40%;
 		}
 	}
 }

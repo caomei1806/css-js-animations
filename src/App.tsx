@@ -5,6 +5,7 @@ import { Navigation } from "./componenets/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Yellow } from "./componenets/Yellow";
 import { White } from "./componenets/White";
+import { PageNotFound404 } from "./componenets/PageNotFound404";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/white">
               <White />
             </Route>
+            <Route component={PageNotFound404} exact></Route>
           </Switch>
         </div>
       </div>
