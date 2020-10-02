@@ -8,7 +8,9 @@ export const White = () => {
       <div className="bg-front"></div>
       <div className="container">
         <div className="left">
-          <h1>Which would you choose?</h1>
+          <h1>
+            Which would you<span> choose</span>?
+          </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             tempore illum cumque consectetur placeat id itaque consequuntur
