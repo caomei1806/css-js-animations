@@ -3,6 +3,8 @@ import React from "react";
 export const Orange = () => {
   return (
     <div className="orange-screen">
+      <div className="bg-back"></div>
+      <div className="bg-front"></div>
       <div className="slide-card-linear mb-3">
         <i className="bx bx-question-mark"></i>
         <div className="inner">

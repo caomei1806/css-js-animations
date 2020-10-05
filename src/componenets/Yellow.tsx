@@ -3,7 +3,10 @@ import React from "react";
 export const Yellow = () => {
   return (
     <div className="yellow-screen">
-      <h1>Yellow</h1>
+      <div className="bg"></div>
+      <div className="bg"></div>
+      <div className="bg"></div>
+      <h1 className="mt-5">Yellow</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         eligendi totam minima, cumque, quaerat sunt maxime quae consequuntur, ad

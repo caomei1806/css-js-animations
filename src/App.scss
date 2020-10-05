@@ -72,11 +72,32 @@
 			height: calc(100% - 56px);
 		}
 		.yellow-screen {
-			background-color: #ffce00;
 			padding: 30px 0;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			color: #e2e2e2;
+			.bg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				&:nth-child(1) {
+					clip-path: polygon(100% 78%, 40% 100%, 100% 100%);
+					background-color: rgb(255, 174, 0);
+					z-index: 4;
+				}
+				&:nth-child(2) {
+					clip-path: polygon(100% 68%, 31% 100%, 100% 100%);
+					background-color: rgb(255, 208, 0);
+					z-index: 3;
+				}
+				&:nth-child(3) {
+					clip-path: polygon(100% 62%, 21% 100%, 100% 100%);
+					background-color: rgb(255, 225, 90);
+				}
+			}
 
 			h1 {
 				width: 150px;
@@ -97,17 +118,18 @@
 				text-transform: uppercase;
 				line-height: 40px;
 				border-radius: 0;
+				color: black;
 				border: 2px solid #26282b;
 				box-shadow: none;
-
-				background-image: linear-gradient(to right, #26282b 50%, transparent 50%);
+				background-color: rgb(255, 208, 0);
 				background-position: 100% 0%;
 				background-size: 200% 100%;
-				transition: 0.5s;
+				transition: all 0.5s;
 
 				&:hover {
-					color: #e3e3e3;
 					background-position: 0% 50%;
+					background-image: linear-gradient(to right, #26282b 50%, transparent 50%);
+					color: #e3e3e3;
 					box-shadow: 3px 3px rgba($color: #000000, $alpha: 0.25);
 				}
 			}
@@ -246,9 +268,26 @@
 			}
 		}
 		.orange-screen {
-			background-color: rgb(252, 143, 0);
+			background-color: #e2e2e2;
 			padding: 3rem 1rem;
+			position: relative;
 
+			.bg-back,
+			.bg-front {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+			.bg-back {
+				clip-path: polygon(100% 43%, 91% 60%, 75% 66%, 59% 78%, 41% 81%, 26% 92%, 5% 100%, 100% 100%);
+				background-color: rgb(252, 143, 0);
+			}
+			.bg-front {
+				clip-path: polygon(100% 59%, 89% 72%, 74% 72%, 61% 83%, 47% 84%, 38% 93%, 16% 100%, 100% 100%);
+				background-color: rgb(252, 101, 0);
+			}
 			.slide-card-circle,
 			.slide-card-linear {
 				width: 250px;
@@ -260,6 +299,7 @@
 			}
 			.slide-card-linear {
 				background-color: rgb(149, 99, 214);
+				box-shadow: 5px 6px rgba($color: #000000, $alpha: 0.2);
 				i {
 					position: absolute;
 					font-size: 150px;
@@ -269,6 +309,7 @@
 				.inner {
 					width: 100%;
 					background-color: white;
+
 					border-radius: 10px;
 					clip-path: inset(0% 0% 0% 100%);
 					transition: all 0.5s ease-in-out;
@@ -283,10 +324,11 @@
 				background-color: rgb(103, 35, 192);
 				padding: 0rem 1rem 1rem 1rem;
 				clip-path: circle(10% at 19% 20%);
-
+				box-shadow: 5px 6px rgba($color: #000000, $alpha: 0.2);
+				color: rgb(14, 14, 14);
 				&:hover {
 					clip-path: circle(75%);
-					background-color: rgb(21, 124, 116);
+					background-color: #e2e2e2;
 				}
 				&:hover span {
 					opacity: 0;
