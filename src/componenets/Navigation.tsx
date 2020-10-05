@@ -6,13 +6,24 @@ export const Navigation: React.FC = () => {
     <div className="navigation">
       <small>ANIMATION MAP </small>
       <br />
-      <Link to="/yellow" className="link yellow">
-        Yellow
+      <Link to="/" className="link yellow">
+        Home
       </Link>
-      <br />
-      <Link to="/white" className="link">
-        White
-      </Link>
+      <div className="css-animations" style={{ marginTop: 20 }}>
+        <small>CSS Animations</small>
+        <br />
+        <Link to="/yellow" className="link yellow">
+          Yellow
+        </Link>
+        <br />
+        <Link to="/white" className="link">
+          White
+        </Link>
+        <br />
+        <Link to="/orange" className="link orange">
+          Orange
+        </Link>
+      </div>
     </div>
   );
 };

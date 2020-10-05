@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
 .app {
 	display: flex;
 	justify-content: center;
@@ -22,6 +23,9 @@
 				&.yellow {
 					color: #ffce00;
 				}
+				&.orange {
+					color: rgb(252, 143, 0);
+				}
 			}
 		}
 	}
@@ -44,6 +48,11 @@
 					width: 20%;
 				}
 			}
+			&.on-orange {
+				&::after {
+					width: 30%;
+				}
+			}
 			&::after {
 				content: "";
 				width: 100%;
@@ -57,6 +66,7 @@
 		}
 		.yellow-screen,
 		.white-screen,
+		.orange-screen,
 		.page-not-found {
 			width: 100%;
 			height: calc(100% - 56px);
@@ -159,7 +169,7 @@
 								position: absolute;
 								height: 3px;
 								width: 90px;
-								background-color: rgb(102, 28, 172);
+								background-color: rgb(58, 33, 201);
 								bottom: 0;
 								margin-left: 180px;
 								transition: all 0.4s ease;
@@ -218,19 +228,56 @@
 							}
 							&:nth-child(3) {
 								background-color: rgb(230, 142, 43);
-
 								top: 105px;
 							}
 
 							img {
 								width: 70px;
 								height: auto;
-								margin-top: 10px;
+								margin-top: 15px;
 							}
 							span {
 								margin-top: 10px;
 							}
 						}
+					}
+				}
+			}
+		}
+		.orange-screen {
+			background-color: rgb(252, 143, 0);
+			padding: 3rem 1rem;
+
+			.inner {
+				width: 250px;
+				padding: 0rem 1rem 1rem 1rem;
+				background-color: rgb(149, 99, 214);
+				border-radius: 10px;
+				clip-path: circle(10% at 19% 20%);
+				transition: all 0.5s ease-in-out;
+				cursor: pointer;
+				color: #e2e2e2;
+				position: relative;
+				&:hover {
+					clip-path: circle(75%);
+					background-color: rgb(104, 5, 5);
+				}
+				&:hover span {
+					opacity: 0;
+				}
+				&:not(:hover) > :not(span) {
+					opacity: 0;
+				}
+				span {
+					position: absolute;
+					color: white;
+					font-weight: 600;
+					transition: color 0.5s;
+					position: relative;
+					left: 22px;
+					top: 40px;
+					i {
+						font-size: 20px;
 					}
 				}
 			}

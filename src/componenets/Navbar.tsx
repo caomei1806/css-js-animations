@@ -10,6 +10,8 @@ export const Navbar: React.FC = () => {
         return " on-yellow";
       case "/white":
         return " on-white";
+      case "/orange":
+        return " on-orange";
       default:
         return "";
     }
