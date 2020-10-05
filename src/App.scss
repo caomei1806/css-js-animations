@@ -161,6 +161,7 @@
 						background-size: 800vw;
 						-webkit-text-fill-color: transparent;
 						-webkit-background-clip: text;
+						background-clip: text;
 						animation: colorShift 15s ease infinite;
 						position: relative;
 						span {
@@ -248,19 +249,44 @@
 			background-color: rgb(252, 143, 0);
 			padding: 3rem 1rem;
 
-			.inner {
+			.slide-card-circle,
+			.slide-card-linear {
 				width: 250px;
-				padding: 0rem 1rem 1rem 1rem;
-				background-color: rgb(149, 99, 214);
 				border-radius: 10px;
-				clip-path: circle(10% at 19% 20%);
+				position: relative;
 				transition: all 0.5s ease-in-out;
 				cursor: pointer;
 				color: #e2e2e2;
-				position: relative;
+			}
+			.slide-card-linear {
+				background-color: rgb(149, 99, 214);
+				i {
+					position: absolute;
+					font-size: 150px;
+					top: 23%;
+					left: 17%;
+				}
+				.inner {
+					width: 100%;
+					background-color: white;
+					border-radius: 10px;
+					clip-path: inset(0% 0% 0% 100%);
+					transition: all 0.5s ease-in-out;
+					color: black;
+					padding: 2rem 1rem;
+				}
+				&:hover .inner {
+					clip-path: inset(0% 0% 0% 0%);
+				}
+			}
+			.slide-card-circle {
+				background-color: rgb(103, 35, 192);
+				padding: 0rem 1rem 1rem 1rem;
+				clip-path: circle(10% at 19% 20%);
+
 				&:hover {
 					clip-path: circle(75%);
-					background-color: rgb(104, 5, 5);
+					background-color: rgb(21, 124, 116);
 				}
 				&:hover span {
 					opacity: 0;
